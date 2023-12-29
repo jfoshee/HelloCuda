@@ -3,9 +3,10 @@
   "tasks": [
     {
       "label": "Build CUDA Project",
+      "dependsOn": ["Create Bin Directory"],
       "type": "shell",
       "command": "nvcc",
-      "args": ["-o", "helloCuda", "hello_cuda.cu"],
+      "args": ["-o", "./bin/helloCuda", "hello_cuda.cu"],
       "options": {
         "env": {
           "PATH": "C:\\Program Files (x86)\\Microsoft Visual Studio\\2022\\BuildTools\\VC\\Tools\\MSVC\\14.38.33130\\bin\\HostX64\\x64;C:\\Program Files (x86)\\Windows Kits\\10\\bin\\10.0.22621.0\\x64;C:\\Program Files (x86)\\Windows Kits\\10\\bin\\x64;${env:PATH}"
@@ -15,6 +16,17 @@
         "kind": "build",
         "isDefault": true
       }
+    },
+    {
+      "label": "Create Bin Directory",
+      "type": "shell",
+      "command": "mkdir",
+      "args": [".\\bin"],
+      "windows": {
+        "command": "cmd.exe",
+        "args": ["/c", "if not exist .\\bin mkdir .\\bin"]
+      },
+      "problemMatcher": []
     }
   ]
 }

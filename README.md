@@ -13,3 +13,10 @@ This project requires `nvcc`
 Once the installation is complete, you should be able to use `nvcc` from the command line.
 
 Please note that `nvcc` requires compatible NVIDIA GPU hardware and appropriate drivers to function properly.
+
+### Windows
+
+Visual Studio or Visual Studio Build Tools (at a minimum) are required to build this project.
+`nvcc` depends on the Visual Studio compiler `cl.exe`.
+
+<https://visualstudio.microsoft.com/downloads/?q=build+tools>

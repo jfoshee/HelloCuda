@@ -20,3 +20,5 @@ Visual Studio or Visual Studio Build Tools (at a minimum) are required to build 
 `nvcc` depends on the Visual Studio compiler `cl.exe`.
 
 <https://visualstudio.microsoft.com/downloads/?q=build+tools>
+
+`tasks.json` assumes `2022\BuildTools\VC\Tools\MSVC\14.38.33130`
